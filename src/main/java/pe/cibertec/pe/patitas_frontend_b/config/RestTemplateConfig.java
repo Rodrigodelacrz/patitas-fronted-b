@@ -14,8 +14,8 @@ public class RestTemplateConfig {
             public RestTemplate restTemplateAutenticacion(RestTemplateBuilder builder){
                 return builder
                         .rootUri("http://localhost:8081/autenticacion")
-                        .setConnectTimeout(Duration.ofSeconds(10))
-                        .setReadTimeout(Duration.ofSeconds(10))
+                        .setConnectTimeout(Duration.ofSeconds(5))
+                        .setReadTimeout(Duration.ofSeconds(5))
                         .build();
             }
 
@@ -23,16 +23,16 @@ public class RestTemplateConfig {
     public RestTemplate restTemplateFinanzas(RestTemplateBuilder builder){
         return builder
 
-                .setConnectTimeout(Duration.ofSeconds(12))
-                .setReadTimeout(Duration.ofSeconds(12))
+                .setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(5))
                 .build();
     }
 
     @Bean
     public RestTemplate restTemplateReporteria(RestTemplateBuilder builder){
         return builder
-                .setConnectTimeout(Duration.ofSeconds(15))
-                .setReadTimeout(Duration.ofSeconds(15))
+                .setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(5))
                 .build();
     }
 
